@@ -9,9 +9,13 @@ execute as @e[tag=general_plague,tag=boss] run execute if score @s attack_timer 
 execute as @e[tag=general_plague,tag=boss] run execute if score @s attack_timer matches ..0 run function boss_mechanics:general_plague/summon_aoes
 execute as @e[tag=general_plague,tag=boss] run execute if score @s attack_timer matches ..0 run scoreboard players operation @s attack_timer = general_plague_recast value
 
+#handle aoe particles
+
+execute at @e[type=armor_stand,tag=aoe,tag=general_plague] run particle minecraft:sneeze ~ ~1 ~ 2 1 2 1 5 normal
+
 #handle aoe countdowns
-execute at @e[type=armor_stand,tag=aoe,tag=general_plague] run execute unless entity @e[type=area_effect_cloud,distance=0..0.5] run effect give @p[gamemode=adventure,!tag=dead,distance=0..3] minecraft:poison 10 0 false
-execute at @e[type=armor_stand,tag=aoe,tag=general_plague] run execute unless entity @e[type=area_effect_cloud,distance=0..0.5] run effect give @p[gamemode=adventure,!tag=dead,distance=0..3] minecraft:instant_damage 1 0 false
+execute at @e[type=armor_stand,tag=aoe,tag=general_plague] run execute unless entity @e[type=area_effect_cloud,distance=0..0.5] run effect give @a[gamemode=adventure,tag=!dead,distance=0..3] minecraft:poison 10 0 false
+execute at @e[type=armor_stand,tag=aoe,tag=general_plague] run execute unless entity @e[type=area_effect_cloud,distance=0..0.5] run effect give @a[gamemode=adventure,tag=!dead,distance=0..3] minecraft:instant_damage 1 0 false
 execute as @e[type=armor_stand,tag=aoe,tag=general_plague] run execute at @s unless entity @e[type=area_effect_cloud,distance=0..0.5] run kill @s
 
 #handle Death
