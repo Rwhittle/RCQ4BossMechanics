@@ -23,3 +23,13 @@ scoreboard players set general_death_recast value 600
 scoreboard players set necro_harass_time value 1200
 scoreboard players set necro_max_health value 500
 scoreboard players set necro_recast value 400
+
+#Shade mechanics
+scoreboard players set necromancer_shade_max_health value 600
+scoreboard players set necromancer_shade_health value 600
+scoreboard players set necromancer_shade_phase_1_transition_health value 300
+scoreboard players set necromancer_shade_phase_2_transition_health value 150
+scoreboard players set necromancer_shade_recast value 600
+scoreboard players set necromancer_shade_phase value 0
+scoreboard players set shades_regen_time value 2400
+scoreboard players set shade_recast value 600

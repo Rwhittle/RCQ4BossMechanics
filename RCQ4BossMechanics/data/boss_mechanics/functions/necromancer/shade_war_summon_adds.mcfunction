@@ -1,0 +1,1 @@
+execute at @e[type=armor_stand,tag=shade_war_add_spawn,sort=random,limit=2] run summon skeleton ~ ~ ~ {HandItems:[{id:"minecraft:bow",Count:1b},{}],HandDropChances:[0.000F,0.085F],ArmorItems:[{},{},{id:"minecraft:leather_chestplate",Count:1b},{}],ArmorDropChances:[0.085F,0.085F,0.000F,0.085F]}
